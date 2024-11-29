@@ -1,6 +1,15 @@
-#include "PrintHello.hpp"
+#include "Gra.hpp"
 
 int main()
 {
-    printHello();
+    Gra gra;
+
+    // Główna pętla gry
+    while (gra.get_stan())
+    {
+        gra.akcja_gracza();
+        gra.tick();
+    }
+
+    return 0;
 }
